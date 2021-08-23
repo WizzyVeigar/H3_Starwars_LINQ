@@ -56,7 +56,7 @@ namespace Starwars
             //}
 
             //OPG 8
-            //foreach (Planet planet in GetPlanetsButTheNamesOfTheMethodsAreGettingTooLong(planets))
+            //foreach (Planet planet in GetPlanetsSpecifcRotationWaterAndName(planets))
             //{
             //    Console.WriteLine(planet.Name);
             //}
@@ -231,7 +231,7 @@ namespace Starwars
         }
 
         //Opg 8
-        static IEnumerable<Planet> GetPlanetsButTheNamesOfTheMethodsAreGettingTooLong(List<Planet> planets)
+        static IEnumerable<Planet> GetPlanetsSpecifcRotationWaterAndName(List<Planet> planets)
         {
             return from planet in planets
                    where (planet.RotationPeriod < 30 || planet.SurfaceWater > 50) && planet.Name.ToLower().Contains("ba")
