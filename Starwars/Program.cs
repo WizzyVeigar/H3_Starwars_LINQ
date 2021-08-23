@@ -86,10 +86,10 @@ namespace Starwars
             //}
 
             //OPG 13
-            //foreach (Planet planet in GetPlanetsDesert(planets))
-            //{
-            //    Console.WriteLine(planet.Name);
-            //}
+            foreach (Planet planet in GetPlanetsDesert(planets))
+            {
+                Console.WriteLine(planet.Name);
+            }
 
             //OPG 14
             //foreach (Planet planet in GetPlanetSwamps(planets))
@@ -290,7 +290,7 @@ namespace Starwars
             IEnumerable<Planet> deserts = from planet in planets
                                           where planet.Terrain != null
                                           from terrain in planet.Terrain
-                                          where terrain != null && terrain.Contains("deserts")
+                                          where terrain != null && terrain.Contains("desert")
                                           select planet;
 
             return deserts;
